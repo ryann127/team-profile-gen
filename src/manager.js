@@ -8,7 +8,7 @@ function renderManager(){
                     </div>
                     <div class="card-body">
                         <p><span class="font-weight-bold">ID: </span> ${manager.id}</p>
-                        <p><span class="font-weight-bold">Email: </span><a class="text-sky-600" id="link"
+                        <p><span class="font-weight-bold">Email: </span><a id="link"
                                 name="email" href="mailto:${manager.email}"> ${manager.email}</a></p>
                         <p><span class="font-weight-bold">Office number: </span> ${manager.officeNumber}</p>
                     </div>
