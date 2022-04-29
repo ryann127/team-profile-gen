@@ -2,12 +2,16 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
+const manHtml = require("./src/manager");
+const engHtml = require("./src/engineer");
+const intHtml = require("./src/intern")
+
 const fs = require("fs");
 const inquirer = require("inquirer");
 const path = require("path");
 
 
-// all'manloyee questions
+// all employee questions
 const questions = [
     {
         type: 'input',

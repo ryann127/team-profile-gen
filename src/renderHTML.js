@@ -1,4 +1,4 @@
-function renderHTML () {
+function renderHTML (teamMembers) {
     return
    ` <!DOCTYPE html>
     <html lang="en">
@@ -18,7 +18,7 @@ function renderHTML () {
     <div class="container">
      <div class="row">
          <div class="team-card col-12 d-flex justify-content-center">
-             ${cards}
+             ${teamMembers}
          </div>
      </div>
     </div>
