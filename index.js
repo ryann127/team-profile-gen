@@ -48,6 +48,7 @@ const questions = [
 
 // manager questions only
 const managerQuery = [
+   
     {
         type: 'input',
         name: 'managerPhone',
