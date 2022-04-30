@@ -50,21 +50,6 @@ const questions = [
 const managerQuery = [
     {
         type: 'input',
-        name: 'managerName',
-        message: 'Please enter manager name:'
-    },
-    {
-        type: 'input',
-        name: 'managerId',
-        message: 'Please enter manager ID:'
-    },
-    {
-        type: 'input',
-        name: 'managerEmail',
-        message: 'Please enter manager email:'
-    },
-    {
-        type: 'input',
         name: 'managerPhone',
         message: "What is the manager's office number?",
     },
@@ -72,21 +57,6 @@ const managerQuery = [
 ]
 // engineer questions only
 const engineerQuery = [
-    {
-        type: 'input',
-        name: 'engineerName',
-        message: 'Please enter engineer name:'
-    },
-    {
-        type: 'input',
-        name: 'engineerId',
-        message: 'Please enter engineer ID:'
-    },
-    {
-        type: 'input',
-        name: 'engineerEmail',
-        message: 'Please enter engineer email:'
-    },
     {
         type: 'input',
         name: 'engineerGithub',
@@ -97,21 +67,6 @@ const engineerQuery = [
 
 // intern questions only
 const internQuery = [
-    {
-        type: 'input',
-        name: 'internName',
-        message: 'Please enter intern name:'
-    },
-    {
-        type: 'input',
-        name: 'internId',
-        message: 'Please enter intern ID:'
-    },
-    {
-        type: 'input',
-        name: 'internEmail',
-        message: 'Please enter intern email:'
-    },
     {
         type: 'input',
         name: 'internSchool',
@@ -142,6 +97,7 @@ const newEmployee = async () => {
                     } else if (employee.getRole() === "Intern") {
                         teamMembers = teamMembers + renderIntern(employee);
                     }
+                    console.log(memberArray)
                 })
 
                writeToFile("./dist/team.html", renderHTML(teamMembers))
