@@ -171,12 +171,7 @@ function writeToFile(fileName, data) {
 
 
 const init = (response) => {
-    // inquirer
-    //     .prompt(questions)
-    //     .then((response) => {
-    //         memberArray.push(new Employee(response.name, response.id, response.email));
     newEmployee();
-
 }
 
 init();
