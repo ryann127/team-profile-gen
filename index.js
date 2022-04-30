@@ -28,7 +28,6 @@ const questions = [
         message: 'Please enter employee name:',
         when: function (placeholder) {
             if (placeholder.empStart === 'No') {
-                console.log(placeholder)
                 return false;
             } else {
                 return true;
@@ -41,7 +40,6 @@ const questions = [
         message: 'Please enter employee ID:',
         when: function (placeholder) {
             if (placeholder.empStart === 'No') {
-                console.log(placeholder)
                 return false;
             } else {
                 return true;
@@ -54,7 +52,6 @@ const questions = [
         message: 'Please enter employee email:',
         when: function (placeholder) {
             if (placeholder.empStart === 'No') {
-                console.log(placeholder)
                 return false;
             } else {
                 return true;
@@ -68,7 +65,6 @@ const questions = [
         choices: ['Manager', 'Engineer', 'Intern'],
         when: function (placeholder) {
             if (placeholder.empStart === 'No') {
-                console.log(placeholder)
                 return false;
             } else {
                 return true;
