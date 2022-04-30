@@ -1,6 +1,5 @@
-function renderManager(){
-    return 
-    `
+function renderManager(manager){
+    return `
     <div class="card text-center mx-3 shadow p-3 mb-5 bg-white rounded">
                     <div class="card-header text-info">
                         <h2>${manager.name}</h2>
