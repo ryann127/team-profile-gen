@@ -10,13 +10,18 @@ const {renderHTML} = require("./src/renderHTML");
 
 const fs = require("fs");
 const inquirer = require("inquirer");
-const path = require("path");
 
 
 const memberArray = [];
 
 // all employee questions
 const questions = [
+    {
+        type: 'list',
+        name: 'empStart',
+        message: 'Would you like to create a new employee profile?',
+        choices: ['Yes', 'No']
+    },
     {
         type: 'input',
         name: 'empName',
@@ -37,12 +42,6 @@ const questions = [
         name: 'empRole',
         message: "Please select employee position:",
         choices: ['Manager', 'Engineer', 'Intern']
-    },
-    {
-        type: 'list',
-        name: 'empStart',
-        message: 'Would you like to create a new employee profile?',
-        choices: ['Yes', 'No']
     },
 ]
 
