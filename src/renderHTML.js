@@ -29,4 +29,4 @@ function renderHTML (teamMembers) {
 
 
 
-module.exports = renderHTML;
+module.exports = {renderHTML};

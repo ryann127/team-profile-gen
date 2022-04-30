@@ -15,4 +15,4 @@ function renderIntern(){
     `
 }
 
-module.exports = intern;
+module.exports = {renderIntern};

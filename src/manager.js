@@ -16,4 +16,4 @@ function renderManager(){
     `
 }
 
-module.exports = manager;
+module.exports = {renderManager};
