@@ -22,7 +22,7 @@ git clone the following repository:
  ## Usage
  Run npm install/inquirer then run "node index.js" to start app. Answer questions as prompted.
 
- <!-- [Video Demonstration](https://drive.google.com/file/d/1qKO7KIYOv2VRcF7y_5NhEMcjQxBN_41a/view) -->
+ [Video Demonstration](https://drive.google.com/file/d/1_hqDjqoLvRI0yo7MfdElKNp7lMzYQec3/view)
 
  ## License
 
