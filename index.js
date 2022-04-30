@@ -3,10 +3,10 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Employee = require("./lib/Employee");
 
-const {renderManager}= require("./src/manager");
-const {renderEngineer} = require("./src/engineer");
-const {renderIntern} = require("./src/intern")
-const {renderHTML} = require("./src/renderHTML");
+const { renderManager } = require("./src/manager");
+const { renderEngineer } = require("./src/engineer");
+const { renderIntern } = require("./src/intern")
+const { renderHTML } = require("./src/renderHTML");
 
 const fs = require("fs");
 const inquirer = require("inquirer");
@@ -25,29 +25,61 @@ const questions = [
     {
         type: 'input',
         name: 'empName',
-        message: 'Please enter employee name:'
+        message: 'Please enter employee name:',
+        when: function (placeholder) {
+            if (placeholder.empStart === 'No') {
+                console.log(placeholder)
+                return false;
+            } else {
+                return true;
+            }
+        }
     },
     {
         type: 'input',
         name: 'empId',
-        message: 'Please enter employee ID:'
+        message: 'Please enter employee ID:',
+        when: function (placeholder) {
+            if (placeholder.empStart === 'No') {
+                console.log(placeholder)
+                return false;
+            } else {
+                return true;
+            }
+        }
     },
     {
         type: 'input',
         name: 'empEmail',
-        message: 'Please enter employee email:'
+        message: 'Please enter employee email:',
+        when: function (placeholder) {
+            if (placeholder.empStart === 'No') {
+                console.log(placeholder)
+                return false;
+            } else {
+                return true;
+            }
+        }
     },
     {
         type: 'list',
         name: 'empRole',
         message: "Please select employee position:",
-        choices: ['Manager', 'Engineer', 'Intern']
+        choices: ['Manager', 'Engineer', 'Intern'],
+        when: function (placeholder) {
+            if (placeholder.empStart === 'No') {
+                console.log(placeholder)
+                return false;
+            } else {
+                return true;
+            }
+        }
     },
 ]
 
 // manager questions only
 const managerQuery = [
-   
+
     {
         type: 'input',
         name: 'managerPhone',
@@ -100,7 +132,7 @@ const newEmployee = async () => {
                     console.log(memberArray)
                 })
 
-               writeToFile("./dist/team.html", renderHTML(teamMembers))
+                writeToFile("./dist/team.html", renderHTML(teamMembers))
             }
             teamHtml();
         } else {
@@ -147,8 +179,8 @@ const init = (response) => {
     //     .prompt(questions)
     //     .then((response) => {
     //         memberArray.push(new Employee(response.name, response.id, response.email));
-            newEmployee();
-     
+    newEmployee();
+
 }
 
 init();
